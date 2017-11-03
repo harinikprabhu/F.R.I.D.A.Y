@@ -48,6 +48,7 @@ def calculate(operator1,op,operator2):
         except ZeroDivisionError:
             print("The second input cannot be zero")
             result = repeatSecondInput(operator1,op,operator2)
+            return result        
     elif op == '*':
         result =  (operator1) *  (operator2)
     elif op == '%':
