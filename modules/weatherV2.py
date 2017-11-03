@@ -8,7 +8,7 @@ with open("assets/weatherInfo.json") as weatherRawData:
 loopController = True
 monthArray = ["january", "february","march","april","may","june","july","august","september","october","november","december"]
 def getUserInput():
-    userReq = input("Please enter the month you would like to know the temperature for in correct format: ")
+    userReq = input("Please enter the month you would like to know the temperature in the format 'what is the temperature in {month}': ")
     userReqFormated = userReq.lower()
     userReqList = userReqFormated.split(' ')
     return userReq, userReqList
@@ -35,6 +35,6 @@ while (loopController == True):
             loopController = False
             break
     else:
-        print("My development is still in baby stage! I will be a know-it-all very soon! But for now I couldn't understand you so can you please repeat clearly?")
+        print("My development is still in baby stage! I will be a know-it-all very soon! \nFor now I can understand only specific commands.\nPlease enter the query in the format 'what is the temperature in {month}'")
         userReq, userReqList = getUserInput()
         continue
