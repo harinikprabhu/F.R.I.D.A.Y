@@ -1,0 +1,62 @@
+{
+    "january": {
+       "Normal": "-4.6",
+       "Warmest": "-1.4",
+       "Coldest": "-7.9"
+    },
+    "february": {
+       "Normal": "-4.1",
+       "Warmest": "-0.9",
+       "Coldest": "-7.4"
+    },
+    "march": {
+       "Normal": "0.5",
+       "Warmest": "3.6",
+       "Coldest": "-2.8"
+    },
+    "april": {
+       "Normal": "6.3",
+       "Warmest": "10.0",
+       "Coldest": "2.5"
+    },
+    "may": {
+       "Normal": "12.0",
+       "Warmest": "16.2",
+       "Coldest": "7.7"
+    },
+    "june": {
+       "Normal": "17.2",
+       "Warmest": "21.7",
+       "Coldest": "12.8"
+    },
+    "july": {
+       "Normal": "20.6",
+       "Warmest": "25.0",
+       "Coldest": "16.2"
+    },
+    "august": {
+       "Normal": "20.3",
+       "Warmest": "24.2",
+       "Coldest": "16.4"
+    },
+    "september": {
+       "Normal": "16.3",
+       "Warmest": "20.0",
+       "Coldest": "12.6"
+    },
+    "october": {
+       "Normal": "10.1",
+       "Warmest": "13.4",
+       "Coldest": "6.8"
+    },
+    "november": {
+       "Normal": "4.7",
+       "Warmest": "7.4",
+       "Coldest": "1.9"
+    },
+    "december": {
+       "Normal": "-1.5",
+       "Warmest": "1.4",
+       "Coldest": "-4.5"
+    }
+ }
