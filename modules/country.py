@@ -1,26 +1,37 @@
 import json
 
-with open('assets/country.json') as json_data:
+with open('modules/assets/country.json') as json_data:
     d = json.load(json_data)
-print("Welcome! You can ask me about location, capital, currency, population, area, population density, GDP, life exp, birth rate and death rate of any country \n\nPlease remember to start the country name with a capital letter \n")
-print("Format: {Field} of {Country}")
-keyString = input("Please enter what you need to know in the following format \
-{Field} of {Country} or enter just the {field}\
- to get the summarized country details: ")
 
-inputList = keyString.split(" of ")
+def countryIterator():
+    iterator = input ("Press 1 to continue the Country Info Bot\nPress 2 to go back to main console of F.R.I.D.A.Y\n")
+    if iterator == '1':
+        country_bot()
+    else:
+        print("Thank you for using Country Info Bot!")
 
-if (len(inputList)==2):
+def country_bot():
+    print("You can ask me about location, capital, currency, population, area, population density, GDP, life exp, birth rate and death rate of any country \n\nPlease remember to start the country name with a capital letter \n")
+    print("Format: [statistic] of [Country]")
+    keyString = input("Please enter your query in the following format: [statistic] of [Country] or just the statistic")
+
+    inputList = keyString.split(" of ")
     try:
-        information = d[inputList[1]][inputList[0]]
-        print (information)
-    except KeyError:
-        print("Enter a valid query")
-        
+        if (len(inputList)==2):
+            try:
+                information = d[inputList[1]][inputList[0]]
+                print (information)
+            except KeyError:
+                print("Enter a valid query")
 
-elif (len(inputList) == 1):
-    count = 0
-    for a in d:
-        if count <= 10:
-            print(d[a][inputList[0]])
-            count = count + 1
+
+        elif (len(inputList) == 1):
+            count = 0
+            for a in d:
+                if count <= 10:
+                    print(d[a][inputList[0]])
+                    count = count + 1
+    except KeyError:
+        print ("That is not a valid entry!")
+        country_bot()
+    countryIterator()
